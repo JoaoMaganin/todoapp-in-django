@@ -29,10 +29,10 @@ def atualizar_tarefa(request, pk):
     form = TarefaForm(instance=tarefa)
 
     if request.method == 'POST':
-        form = TarefaForm(request.POST)
+        form = TarefaForm(request.POST, instance=tarefa)
         if form.is_valid():
             form.save()
-        return redirect('index')
+            return redirect('/')
 
     context = {
         'form': form
