@@ -39,3 +39,17 @@ def atualizar_tarefa(request, pk):
     }
 
     return render(request, 'atualizar_tarefa.html', context)
+
+
+def deletar_tarefa(request, pk):
+    item = Tarefa.objects.get(id=pk)
+
+    if request.method == 'POST':
+        item.delete()
+        return redirect('index')
+
+    context = {
+        'item': item
+    }
+
+    return render(request, 'deletar_tarefa.html', context)

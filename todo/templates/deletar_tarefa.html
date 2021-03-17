@@ -1,0 +1,8 @@
+<p>Você deseja realmente deletar a tarefa "{{item}}"</p>
+
+<a href="{% url 'index' %}">Cancelar</a>
+
+<form method="POST" action="">
+    {% csrf_token %}
+    <input type="submit" name="Confirmar">
+</form>
