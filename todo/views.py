@@ -21,3 +21,21 @@ def index(request):
     }
 
     return render(request, 'index.html', context)
+
+
+def atualizar_tarefa(request, pk):
+    tarefa = Tarefa.objects.get(id=pk)
+
+    form = TarefaForm(instance=tarefa)
+
+    if request.method == 'POST':
+        form = TarefaForm(request.POST)
+        if form.is_valid():
+            form.save()
+        return redirect('index')
+
+    context = {
+        'form': form
+    }
+
+    return render(request, 'atualizar_tarefa.html', context)
