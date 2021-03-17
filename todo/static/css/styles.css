@@ -1,9 +1,4 @@
-<link rel="stylesheet"
-href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-crossorigin="anonymous">
-<style>
-	body{
+.body{
 		background-color: #4F4F4F;
 	}
 	input{
@@ -39,18 +34,3 @@ crossorigin="anonymous">
 	    background-color: #ff0000;
 		border-color: #000;
 	}
-	.btn-primary{
-	    border-color: #000;
-	    width: 100%;
-	}
-</style>
-<div class="center-column">
-    <p>Você deseja realmente deletar a tarefa "{{item}}"</p>
-
-    <a class="btn btn-primary" href="{% url 'index' %}">Cancelar</a>
-
-    <form method="POST" action="">
-        {% csrf_token %}
-        <input type="submit" name="Confirmar">
-    </form>
-</div>
