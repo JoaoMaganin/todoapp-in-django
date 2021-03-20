@@ -4,7 +4,7 @@
 ou não. Tudo isso é puxado do banco de dados para ser mostrado na página do site.</p>
 <p align=center>Este projeto é do youtuber Dennis Ivy, link do vídeo original: https://www.youtube.com/watch?v=4RWFvXDUmjo&t=2168s</p>
 
-![img-aqui]()
+![](images/index.PNG)
 
 <h4>Como rodar a aplicação</h4
 
