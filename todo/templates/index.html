@@ -52,9 +52,11 @@ crossorigin="anonymous">
         <input class="btn btn-light" type="submit" name="Criar Tarefa">
     </form>
 
-     <div class="item-row">
-        {% for tarefa in tarefas %}
 
+
+    {% for tarefa in tarefas %}
+
+    <div class="item-row">
         <a class="btn btn-sm btn-danger" href="{% url 'atualizar_tarefa' tarefa.id %}">Atualizar</a>
         <a class="btn btn-sm btn-primary" href="{% url 'deletar_tarefa' tarefa.id %}">Deletar</a>
         {% if tarefa.completo == True %}
@@ -62,6 +64,7 @@ crossorigin="anonymous">
         {% else %}
             <span>{{ tarefa }}<span>
         {% endif %}
+    </div>
         {% endfor %}
-     </div>
+
 </div>

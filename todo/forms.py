@@ -9,3 +9,5 @@ class TarefaForm(forms.ModelForm):
     class Meta:
         model = Tarefa
         fields = '__all__'
+
+    titulo = forms.CharField(widget=forms.TextInput(attrs={'placeholder':'Adicionar nova tarefa...'}))
